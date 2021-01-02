@@ -1,0 +1,65 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container{
+  background-color: #edebd1;
+  margin: 50px;
+  padding: 50px;
+  border-radius: 25px;
+}
+
+h1{
+  text-align: center;
+  font-family: 'Abril Fatface';
+}
+
+.winning-message{
+  font-family: 'Abril Fatface';
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h3{
+  color: saddlebrown;
+  cursor: pointer;
+  text-align: center;
+}
+
+.flexcontainer{
+  display: flex;
+  width: 31rem;
+  margin: auto;
+  border: 1px;
+  flex-wrap: wrap; /* if make browser window smaller should it go down to next line */
+}
+
+.innerbox{
+  display: flex;  /* using this to center the x's and o's */
+  justify-content: center; /* content to center */
+  align-items: center; /* used for distributing space between and around flex items along cross-axis of container (for x's and o's)*/
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid black;
+}
+
+.innerbox:hover{
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+.x::after {  /* works after classlist adds x so after we click */
+  content: '×';
+  font-size: 100px;
+  color: saddlebrown;
+}
+
+.o::after {
+  content: '○';
+  font-size: 130px;
+  color: #363636;
+  font-weight: bolder;
+}
